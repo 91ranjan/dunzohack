@@ -1,0 +1,111 @@
+.page_navigations {
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #000;
+    width: 200px;
+    z-index: 1002;
+    transition: 1s;
+    padding-bottom: 20px;
+    // box-shadow: 0px 0px 6px 1px #aaa;
+
+    &.hide_navigations {
+        left: -120px;
+    }
+
+    .nav_items {
+        overflow: auto;
+        // height: calc(100vh - 80px);
+        height: 100vh;
+    }
+
+    .toggle_nav_btn {
+        position: absolute;
+        right: -40px;
+        top: 30px;
+        cursor: pointer;
+    }
+
+    .site_logo {
+        margin: 0px auto;
+        display: block;
+        cursor: pointer;
+        padding: 5px 10px;
+        height: 70px;
+        width: 100px;
+    }
+	/*.ant-menu {
+		background-color: inherit;
+		// height: calc(100vh - 330px);
+		// overflow: auto;
+		border: 0px;
+
+	}*/
+    .ant-menu-item {
+        margin-right: 0px;
+        width: 100%;
+        font-size: 21px;
+        height: 105px;
+        cursor: pointer;
+        padding: 15px 24px;
+    }
+    svg {
+        height: 30px;
+        width: 30px;
+        fill: #fff;
+        display: block;
+    }
+
+    .poweredBy {
+        font-size: 10px;
+        img {
+            height: 45px;
+        }
+    }
+
+    a {
+        text-align: left;
+        color: #9B9B9B;
+        display: block;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            text-decoration: none;
+        }
+        span {
+            width: 100px;
+            white-space: pre-wrap;
+            line-height: 20px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        svg > g{
+            stroke: #9B9B9B;
+        }
+
+    }
+
+    /*.ant-menu-item:hover, .selected-item, .ant-menu-item-selected:not(.ant-menu-horizontal)  {
+        background-color: transparent;
+        &:before, &:after {
+            display: none;
+        }
+        a {
+            text-decoration: none;
+            color: #0097FB;
+            svg > g {
+                stroke: #0097FB;
+            }
+            &:after {
+                display: none;
+            }
+        }
+    }*/
+}

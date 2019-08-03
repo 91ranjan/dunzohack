@@ -1,0 +1,18 @@
+.table_row {
+    overflow: hidden;
+    cursor: pointer;
+
+    &:last-child td:first-child {
+        border-radius: 0px 0px 0px 5px;
+    }
+    &:last-child td:last-child {
+        border-radius: 0px 0px 5px 0px;
+    }
+    &:hover {
+        background-color: #b6e7fb;
+    }
+    td {
+        padding: 7px;
+        font-size: 14px;
+    }
+}

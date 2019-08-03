@@ -1,0 +1,32 @@
+.radio_input {
+    color: rgba(153,153,153,1);
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 15px;
+
+    
+    .ant-radio-group {
+        margin-top: 20px;
+        >.ant-radio-wrapper {
+            margin-right: 20px;
+            
+        }
+        
+        .ant-radio-checked .ant-radio-inner {
+            border-color: rgba(0,170,76,1);
+            
+            &:after {
+                background-color: rgba(0,170,76,1);
+            }
+        }
+    }
+    &.radio_input_vertical {
+        >.ant-radio-group {
+            >.ant-radio-wrapper {
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

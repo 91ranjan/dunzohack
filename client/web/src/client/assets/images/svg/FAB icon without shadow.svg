@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>FAB</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="A_Global-Navigations" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="a01_Dashboard_Main" transform="translate(-1169.000000, -756.000000)">
+            <g id="FAB" transform="translate(1169.000000, 756.000000)">
+                <g id="Contacts" fill="#0097FB">
+                    <g id="Group-2">
+                        <path d="M28,56 C43.463973,56 56,43.463973 56,28 C56,12.536027 43.463973,0 28,0 C12.536027,0 0,12.536027 0,28 C0,43.463973 12.536027,56 28,56 Z" id="Oval-4"></path>
+                    </g>
+                </g>
+                <path d="M29,27 L36,27 L36,29 L29,29 L29,36 L27,36 L27,29 L20,29 L20,27 L27,27 L27,20 L29,20 L29,27 Z" id="Rectangle-39" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

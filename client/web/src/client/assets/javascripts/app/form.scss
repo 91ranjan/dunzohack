@@ -1,0 +1,154 @@
+/* Headings */
+h3.section_heading {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+h2.label {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.63rem;
+    text-align: left;
+    color: #1c2e3d;
+    padding: .25rem .4rem;
+    letter-spacing: 0.2px;
+}
+
+h3.label {
+    color: #1c2e3d;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+
+p {
+    // color: rgba(28, 46, 61, 0.3);
+    // padding: .25rem .4rem;
+    // font-weight: 500;
+}
+
+ol, ul {
+    list-style-type: initial;
+    padding-left: 25px;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+table {
+    width: 100%;
+}
+
+table.rounded {
+    border-radius: 5px;
+}
+table.padded {
+    td {
+        padding: 10px 29px;
+    }
+}
+table.border {
+    td {
+        border: 1px solid #ccc;
+    }
+}
+
+.rounded-icon {
+    border-radius: 100%;
+    border: 1px solid;
+    display: inline-block;
+    padding: 0px 4px;
+    line-height: 17px;
+}
+
+.release_tag {
+    font-size: 13px;
+    display: inline-block;
+    background-color: #7f99e4;
+    padding: 0px 5px;
+    line-height: 20px;
+    margin-right: 10px;
+}
+
+.usecase_tag {
+    font-size: 13px;
+    border: 1px solid #fff028;
+    border-radius: 2px;
+    padding: 2px 4px;
+    background-color: #fff028;
+    margin-right: 10px;
+    color: #000;
+    border-radius: 3px;
+}
+
+.section_tag {
+    font-size: 13px;
+    border: 1px solid #b5b5b5;
+    padding: 2px 4px;
+    background-color: #bdbdbd;
+    margin-right: 10px;
+    color: #f7f7f7;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.feature_tag {
+    font-size: 13px;
+    border: 1px solid #05fff6;
+    border-radius: 2px;
+    padding: 2px 4px;
+    background-color: #05fff6;
+    margin-right: 10px;
+    color: #000;
+}
+
+.flow_tags {
+    background: #eee;
+    padding: 5px 5px;
+    margin: 0px 3px;
+    font-size: 13px;
+}
+
+.subsystem_tag {
+    font-size: 13px;
+    border: 1px solid orange;
+    border-radius: 2px;
+    padding: 2px 4px;
+    background-color: orange;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: #000;
+}
+
+.excel-table {
+    border: 1px solid #e7eaec;
+    tr th {
+        background: #f9f9f9;
+        padding: 8px;
+        font-weight: 600;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        font-size: 15px
+    }
+
+    tbody tr td {
+        background-color: #fff;
+        padding-left: 8px;
+        padding-right: 8px;
+        border-right: 1px solid #eee;
+        border-bottom: 1px solid #ddd;
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    tbody tr {
+        border-bottom: 1px solid #ddd;
+        vertical-align: text-top;
+        &:hover td {
+            background-color: #f9f9f9;
+        }
+    }
+}

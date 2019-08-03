@@ -1,0 +1,17 @@
+.notifications_section {
+	position: absolute;
+	top: 40px;
+	left: 50%;
+	min-width: 200px;
+	padding: 20px;
+	border-radius: 5px;
+	transform: translateX(-50%);
+
+	.noty_success {
+		background: rgba(0, 128, 0, 0.5);
+	}
+
+	.noty_failure {
+		background: rgba(128, 0, 0, 0.5);
+	}
+}

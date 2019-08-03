@@ -1,0 +1,48 @@
+.pageTitle {
+    max-width: 1300px;
+    margin: 0px auto;
+    height: 80px;
+    padding: 10px 0px;
+
+    h3 {
+        display: inline-block;
+        color: #B3B3B3;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 27px;
+        margin-top: 15px;
+    }
+
+    .page_date_selector {
+        float: right;
+        >span {
+            color: #666666;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19px;
+            text-align: right;
+        }
+        >div {
+            background-color: #fff;
+            display: inline-block;
+            padding: 9px 10px;
+            border-radius: 5px;
+            margin-left: 20px;
+
+            .anticon {
+                color: #ADADAD;
+                margin: 0px 5px;
+                cursor: pointer;
+                vertical-align: middle;
+            }
+        }
+        .ant-calendar-picker {
+            width: 110px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .ant-calendar-picker-input {
+            border: 0px;
+        }
+    }
+}

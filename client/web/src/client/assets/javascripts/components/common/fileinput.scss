@@ -1,0 +1,17 @@
+.file_upload_button {
+	position: relative;
+	cursor: pointer;
+
+	input[type="file"] {
+		// position: absolute;
+		cursor: pointer;
+		// left: -80px;
+		// top: 0;
+		// right: 0;
+		// bottom: 0;
+		// font-size: 1;
+		height: 100%;
+		opacity: 0;
+		width: 0px;
+	}
+}

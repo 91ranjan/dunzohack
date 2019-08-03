@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="21px" viewBox="0 0 23 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Left-Nav" transform="translate(-39.000000, -267.000000)">
+            <g id="Group-5">
+                <g transform="translate(29.000000, 267.000000)">
+                    <g id="Group-3" transform="translate(10.000000, 0.000000)">
+                        <ellipse id="Oval-2" cx="7.11904762" cy="7.18421053" rx="2.73809524" ry="2.76315789"></ellipse>
+                        <path d="M1.5952381,1.14190791 L1.5952381,15.551862 C1.5952381,15.8280044 1.81909572,16.051862 2.0952381,16.051862 L20.2484475,16.051862 C20.5245898,16.051862 20.7484475,15.8280044 20.7484475,15.551862 L20.7484475,1.14190791 L1.5952381,1.14190791 Z" id="Rectangle-5"></path>
+                        <path d="M0,1.10526316 L22.1437591,1.10526316" id="Path-7"></path>
+                        <path d="M13.3142726,20.0928851 L15.5708675,15.9328874" id="Path-8-Copy" transform="translate(14.442570, 18.012886) scale(-1, 1) translate(-14.442570, -18.012886) "></path>
+                        <path d="M13.1428571,4.42105263 L18.1229607,4.42105263" id="Path-9"></path>
+                        <path d="M13.1428571,7.73684211 L18.1229607,7.73684211" id="Path-9-Copy"></path>
+                        <path d="M13.1428571,11.0526316 L18.1229607,11.0526316" id="Path-9-Copy-2"></path>
+                        <path d="M6.57142857,20.4021352 L8.56978647,15.9888429" id="Path-8"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

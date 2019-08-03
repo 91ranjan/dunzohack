@@ -1,0 +1,13 @@
+.do_select_comp {
+    width: 200px;
+    max-width: 100%;
+
+    .ant-select-selection {
+        background: #fff;
+    }
+
+    .ant-select-search__field__placeholder,
+    .ant-select-selection__placeholder {
+        transform: translateY(-20%);
+    }
+}

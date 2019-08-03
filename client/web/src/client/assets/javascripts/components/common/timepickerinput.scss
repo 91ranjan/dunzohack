@@ -1,0 +1,72 @@
+.timepicker_input {
+    color: rgba(153,153,153,1);
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 15px;
+    position: relative;
+
+    .timepicker_label {
+        display: block;
+        width: 100%;
+        height: 15px;
+        color: #1b2133;
+        font-size: 14px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+    }
+
+    .ant-time-picker {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    input {
+        display: inline-block;
+        height: 40px;
+        width: 300px;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 0 10px 0 35px;
+        line-height: 38px;
+        color: #1b2133;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #ccc;
+        border-radius: 20px;
+    }
+    
+    .ant-time-picker-icon {
+        left: 12px;
+        top: 22px;
+    }
+
+    .ant-time-picker-large .ant-time-picker-input {
+        padding: 0 10px 0 35px;
+    }
+
+    &.timepicker_input_inline {
+        display: block;
+        .timepicker_label {
+            display: inline-block;
+            vertical-align: middle;
+            height: auto;
+            position: relative;
+            width: 100px;
+        }
+
+        > span:not(.timepicker_label) {
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 0px;
+            width: auto;
+        }
+
+        &.timepicker_input_fullwidth {
+            > span:not(.timepicker_label) {
+                width: calc(100% - 110px);
+            }
+        }
+    }
+}

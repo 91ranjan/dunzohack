@@ -1,0 +1,15 @@
+.table_pagination {
+    button {
+        margin: 0px;
+        border-width: 1px 0px 1px 1px;
+        border-radius: 0px;
+
+        &:first-child {
+            border-radius: 3px;
+        }
+        &:last-child {
+            border-radius: 3px;
+            border-width: 1px;
+        }
+    }
+}

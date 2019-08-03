@@ -1,0 +1,15 @@
+.texteditor {
+    min-height: 200px;
+    width: 100%;
+
+    :global(.ql-toolbar.ql-snow) {
+        border: none;
+    }
+    :global(.ql-editor) {
+        border: 1px solid #E6E6E6;
+        min-height: 150px;
+    }
+    :global(.ql-container.ql-snow) {
+        border: none;
+    }
+}

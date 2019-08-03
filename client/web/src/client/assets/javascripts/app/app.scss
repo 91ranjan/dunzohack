@@ -1,0 +1,225 @@
+@mixin background_h_gradient($start, $end) {
+    background: $start; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(
+        left,
+        $start,
+        $end
+    ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(
+        right,
+        $start,
+        $end
+    ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(
+        right,
+        $start,
+        $end
+    ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, $start, $end); /* Standard syntax */
+}
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+
+body,
+.page-container {
+    background-color: #e1e1e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*
+    Overriding ant styles
+ */
+.ant-layout {
+    background-color: #e1e1e1;
+}
+.page-container {
+    min-height: 100vh;
+}
+
+.section_container {
+    width: 1300px;
+    margin: 0px auto;
+}
+
+.ant-layout-sider {
+    background-color: #fff;
+}
+
+button.ant-btn-primary {
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 0px 25px;
+    height: 30px;
+    line-height: 20px;
+}
+
+
+// Ant Modal
+.ant-modal-content .ant-modal-body {
+    padding: 0px;
+}
+
+.hide {
+    display: none !important;
+}
+
+::selection {
+    background-color: #4a90e2;
+    opacity: 0.21;
+}
+
+// ::-webkit-input-placeholder {
+//     /* Chrome/Opera/Safari */
+//     font-style: normal;
+//     color: #1b2133;
+//     font-size: 14px;
+// }
+// ::-moz-placeholder {
+//     /* Firefox 19+ */
+//     font-style: normal;
+//     color: #1b2133;
+//     font-size: 14px;
+// }
+// :-ms-input-placeholder {
+//     /* IE 10+ */
+//     font-style: normal;
+//     color: #1b2133;
+//     font-size: 14px;
+// }
+// :-moz-placeholder {
+//     /* Firefox 18- */
+//     font-style: normal;
+//     color: #1b2133;
+//     font-size: 14px;
+// }
+
+h2.label,
+button {
+    letter-spacing: initial !important;
+}
+
+/*
+ * Bootstrap supports
+ */
+
+.ant-row.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.ant-row.is-flex > [class*="ant-col-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+* And with max cross-browser enabled.
+* Nobody should ever write this by hand.
+* Use a preprocesser with autoprefixing.
+*/
+.ant-row.is-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.ant-row.is-flex > [class*="ant-col-"] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+// React Tables.
+
+.ReactTable {
+    width: 100%;
+
+    .rt-thead {
+        &.-header {
+            box-shadow: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        }
+        .rt-th {
+            color: #5b595b;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 5px 8px 10px;
+            text-align: left;
+        }
+    }
+
+    .rt-tr {
+        &.-odd {
+            background-color: #ededed;
+        }
+
+        .rt-td {
+            padding: 8px 5px 8px 10px;
+            font-size: 14px;
+            color: #5b595b;
+        }
+    }
+
+    .sno {
+        max-width: 70px;
+    }
+}
+
+// React Grid Table
+.react-grid-Container {
+    .react-grid-Header {
+        background-color: #fff;
+        box-shadow: none;
+        .react-grid-HeaderCell {
+            background: #f9f9f9;
+            padding: 8px;
+            font-weight: 700;
+            border-right: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+        }
+    }
+    .react-grid-Viewport {
+        .react-grid-Cell {
+            color: #666;
+            font-family: 'PT Sans',Tahoma;
+            font-weight: 300;
+            font-size: 15px;
+        }
+    }
+}
+
+.rdg-child-cell .react-grid-Cell__value {
+    line-height: 60px !important
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    padding: 2px;
+    background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #e8e8e8;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #e8e8e8;
+}

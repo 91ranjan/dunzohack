@@ -1,0 +1,130 @@
+.ant-btn {
+    margin: 0px 5px;
+    padding: 5px 35px;
+    height: 35px;
+
+    >i {
+        margin: 0px 2px;
+    }
+}
+button.btn_fulllength {
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+button.btn_primary {
+    color: #fff;
+    background-color: #0197FB;
+    border-color: #fff;
+    font-weight: 500;
+    letter-spacing: 1.25px;
+    font-size: 14px;
+
+    svg {
+        fill: #fff;
+        height: 16px;
+        width: 16px;
+    }
+}
+
+button.btn_plain {
+    padding: 12px 22px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    color: #999;
+    background-color: #ffffff;
+    font-size: 10px;
+}
+
+.ant-btn.btn_red {
+    color: #ffffff;
+    background-color: #f04134;
+    border-color: #f04134;
+    &:hover,
+    &:active,
+    &:focus {
+        color: #ffffff;
+        background-color: #f04134;
+        border-color: #f04134;
+    }
+}
+
+.ant-btn.btn_green {
+    color: #ffffff;
+    background-color: #84c01d;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    border-color: #84c01d;
+    border-radius: 20px;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: #ffffff;
+        background-color: #77b709;
+        border-color: #77b709;
+    }
+}
+
+.ant-btn.btn_yellow {
+    color: #ffffff;
+    background-color: #fbb60e;;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    border-color: #fbb60e;
+    border-radius: 20px;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: #ffffff;
+        background-color: #e0a617;
+        border-color: #e0a617;
+    }
+}
+
+.ant-btn.btn_yellow_bordered {
+    color: #fbb70e;;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    border-color: #fbb70e;
+    border-radius: 20px;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: #ffffff;
+        background-color: #77b709;
+        border-color: #77b709;
+    }
+}
+
+.ant-btn.btn_grey {
+    color: #ffffff;
+    background-color: #808080;
+    border-color: #808080;
+    &:hover,
+    &:active,
+    &:focus {
+        color: #ffffff;
+        background-color: #808080;
+        border-color: #808080;
+    }
+}
+
+.ant-btn.btn_large {
+    line-height: 2.5;
+    padding: 0px 24px;
+    font-weight: 600;
+    height: auto;
+    border-radius: 30px;
+    letter-spacing: 2px !important;
+}
+
+button.btn_full_width {
+    width: 100%;
+    margin: 0px;
+}

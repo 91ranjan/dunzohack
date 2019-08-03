@@ -1,0 +1,8 @@
+.dashboard_default_layout {
+
+}
+
+.dashboard_map {
+    /*height: 400px;*/
+    width: 100%;
+}

@@ -1,0 +1,24 @@
+.verticalFormRow {
+    label {
+        margin-bottom : 0px;
+    }
+
+    .value>span:first-child {
+        max-width: 120px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .unit {
+        color: #CCCCCC;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 15px;
+        margin-left: 5px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}

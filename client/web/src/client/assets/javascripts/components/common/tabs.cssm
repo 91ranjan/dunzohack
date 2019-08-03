@@ -1,0 +1,32 @@
+.tabs {
+    list-style: none;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.tab {
+    display: inline-block;
+    padding: 1px 20px;
+    line-height: 25px;   
+    cursor: pointer;
+    &:hover {
+        color: #0097FB;
+        border-bottom: 2px solid #0097FB;
+
+        svg {
+            fill: #0097FB;
+        }
+    }
+}
+
+.tab.active {
+    color: #0097FB;
+    border-bottom: 2px solid #0097FB;
+    svg {
+        fill: #0097FB;
+    }
+}
+
+.icon {
+    display: block;
+}

@@ -1,0 +1,57 @@
+{
+    "name" : "Product",
+    "key" : "DOCS",
+    "description" : "Docs for the product",
+    "permission_attrs" : [
+        {
+            "entity" : "RELEASE",
+            "description" : "User is able to get a release doc",
+            "operation" : "RETRIVE"
+        },
+        {
+            "entity" : "RELEASE",
+            "description" : "User is able to create a release doc",
+            "operation" : "CREATE"
+        },
+        {
+            "entity" : "RELEASE",
+            "description" : "User is able to update a release doc",
+            "operation" : "UPDATE"
+        },
+        {
+            "entity" : "RELEASE",
+            "description" : "User is able to delete a release doc",
+            "operation" : "DELETE"
+        },
+        {
+            "entity" : "RELEASE",
+            "description" : "User is able to comment on a release doc",
+            "operation" : "COMMENT"
+        },
+        {
+            "entity" : "FEATURE",
+            "description" : "User is able to get a feature doc",
+            "operation" : "RETRIVE"
+        },
+        {
+            "entity" : "FEATURE",
+            "description" : "User is able to create a feature doc",
+            "operation" : "CREATE"
+        },
+        {
+            "entity" : "FEATURE",
+            "description" : "User is able to update a feature doc",
+            "operation" : "UPDATE"
+        },
+        {
+            "entity" : "FEATURE",
+            "description" : "User is able to delete a feature doc",
+            "operation" : "DELETE"
+        },
+        {
+            "entity" : "FEATURE",
+            "description" : "User is able to comment on a feature doc",
+            "operation" : "COMMENT"
+        }
+    ]
+}

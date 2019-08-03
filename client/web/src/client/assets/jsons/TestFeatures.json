@@ -1,0 +1,163 @@
+{
+    "name" : "Product",
+    "key" : "TEST",
+    "description" : "Test release level",
+    "permission_attrs" : [
+        {
+            "entity" : "RELEASE",
+            "description" : "User is able to get a release",
+            "operation" : "RETRIVE",
+            "id" : "3cf893ff-ac9a-41c6-b990-7cd90d57cda2"
+        },
+        {
+            "entity" : "RELEASE",
+            "description" : "User is able to create a release",
+            "operation" : "CREATE",
+            "id" : "2a8c5cc0-3aa5-4fa2-9013-e4d3e0171272"
+        },
+        {
+            "entity" : "RELEASE",
+            "description" : "User is able to update a release",
+            "operation" : "UPDATE",
+            "id" : "e2f313de-ca54-46d9-8d67-66551b1904f8"
+        },
+        {
+            "entity" : "RELEASE",
+            "description" : "User is able to delete a release",
+            "operation" : "DELETE",
+            "id" : "88079ee7-ae93-4f1d-83f1-f4e6852683b0"
+        },
+        {
+            "entity" : "FEATURE",
+            "description" : "User is able to get a feature",
+            "operation" : "RETRIVE",
+            "id" : "f3bd0f0a-babf-44de-9d64-a08c2029ee08"
+        },
+        {
+            "entity" : "FEATURE",
+            "description" : "User is able to create a feature",
+            "operation" : "CREATE",
+            "id" : "49ec7fb2-e69f-4bac-9d9c-d337472449d6"
+        },
+        {
+            "entity" : "FEATURE",
+            "description" : "User is able to update a feature",
+            "operation" : "UPDATE",
+            "id" : "77a40d1d-54f2-4b11-ab1b-db97c419720f"
+        },
+        {
+            "entity" : "FEATURE",
+            "description" : "User is able to delete a feature",
+            "operation" : "DELETE",
+            "id" : "d4c81ecb-391f-4107-98f1-25de13f6dab0"
+        },
+        {
+            "entity" : "FEATURE",
+            "description" : "User is able to run a feature",
+            "operation" : "RUN",
+            "id" : "bddd37e2-f4e9-4a73-ae9c-cd7722eb4da4"
+        },
+        {
+            "entity" : "FEATURE",
+            "description" : "User is able to review a feature",
+            "operation" : "REVIEW",
+            "id" : "19e88eee-6bc3-4ded-a504-c99daee9c9a1"
+        },
+        {
+            "entity" : "USECASE",
+            "description" : "User is able to get a usecase",
+            "operation" : "RETRIVE",
+            "id" : "f5b65e83-a6d0-4449-a4b0-9a582d940db5"
+        },
+        {
+            "entity" : "USECASE",
+            "description" : "User is able to create a usecase",
+            "operation" : "CREATE",
+            "id" : "c2d90a14-6924-405e-916f-bcb577ec55df"
+        },
+        {
+            "entity" : "USECASE",
+            "description" : "User is able to update a usecase",
+            "operation" : "UPDATE",
+            "id" : "50ba47f8-5e44-4bcd-b9fa-f6794dd36276"
+        },
+        {
+            "entity" : "USECASE",
+            "description" : "User is able to delete a usecase",
+            "operation" : "DELETE",
+            "id" : "ae0a27d1-efdb-46df-9fdc-8ea892b4d44f"
+        },
+        {
+            "entity" : "USECASE",
+            "description" : "User is able to run a usecase",
+            "operation" : "RUN",
+            "id" : "2f029fb1-5934-40bc-b2aa-d2f15e46a3f8"
+        },
+        {
+            "entity" : "FLOW",
+            "description" : "User is able to create a flow",
+            "operation" : "RETRIVE",
+            "id" : "70c33db1-1415-46a8-a96f-05ef804468da"
+        },
+        {
+            "entity" : "FLOW",
+            "description" : "User is able to create a flow",
+            "operation" : "CREATE",
+            "id" : "b135c665-d1e5-4146-92bc-2ca02e78ec27"
+        },
+        {
+            "entity" : "FLOW",
+            "description" : "User is able to update a flow",
+            "operation" : "UPDATE",
+            "id" : "85d382ba-231d-4a34-9fa3-b2e47ddf4249"
+        },
+        {
+            "entity" : "FLOW",
+            "description" : "User is able to delete a flow",
+            "operation" : "DELETE",
+            "id" : "38ba371e-503e-401b-9328-c0de6bfd6dde"
+        },
+        {
+            "entity" : "STEP",
+            "description" : "User is able to create a step",
+            "operation" : "RETRIVE",
+            "id" : "c4962ffa-4974-4ce4-b314-f2a5e19beba7"
+        },
+        {
+            "entity" : "STEP",
+            "description" : "User is able to create a step",
+            "operation" : "CREATE",
+            "id" : "b6ef7649-3bb8-4b3b-a082-484a33818352"
+        },
+        {
+            "entity" : "STEP",
+            "description" : "User is able to update a steps",
+            "operation" : "UPDATE",
+            "id" : "e68a8bc0-56dc-4b9a-b2f9-6eb3652f9998"
+        },
+        {
+            "entity" : "STEP",
+            "description" : "User is able to delete a steps",
+            "operation" : "DELETE",
+            "id" : "03353527-279b-4cef-9b51-22335f6f22f1"
+        },
+        {
+            "entity" : "COMMIT",
+            "description" : "User is able to create commit",
+            "operation" : "CREATE",
+            "id" : "03353527-279b-4cef-ab51-22335f6f22f2"
+        },
+        {
+            "entity" : "COMMIT",
+            "description" : "User is able to view commit",
+            "operation" : "RETRIVE",
+            "id" : "03353527-279b-4cef-ab51-12335f6f22f2"
+        },
+        {
+            "entity" : "COMMIT",
+            "description" : "User is able to delete commit",
+            "operation" : "DELETE",
+            "id" : "03353527-279b-4cef-ab51-12335f7f22f2"
+        }
+    ]
+}

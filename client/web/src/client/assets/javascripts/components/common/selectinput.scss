@@ -1,0 +1,94 @@
+.select_input {
+    color: #1b2133;
+    font-family: Lato;
+    font-weight: 400;
+    line-height: 15px;
+    position: relative;
+    max-width: 100%;
+
+    .select_label {
+        display: block;
+        width: 100%;
+        height: 15px;
+        font-size: 14px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    .ant-select-selection {
+        height: auto;
+        font-size: 14px;
+        font-weight: 400;
+        color: #4c4c4c;
+        padding: 3px 15px 3px;
+        background-color: #fff;
+        border-radius: 4px;
+    }
+
+    &.select_input_small {
+        .ant-select-selection {
+            padding: 0px 0px;
+            height: 25px;
+        }
+    }
+
+    &.select_input_bottom_border {
+        .ant-select-selection {
+            border-width: 0px 0px 1px 0px;
+        }
+    }
+
+    &.select_input_fullwidth {
+        width: 100%;
+        .do_select_comp,
+        .ant-select-selection {
+            width: 100%;
+        }
+        .ant-select-selection {
+            padding: 5px 10px;
+            height: auto;
+        }
+    }
+
+    .ant-select-selection__rendered {
+        line-height: 30px;
+        margin: -7px -5px;
+        ul {
+            margin: 4px 0px 0px;
+        }
+    }
+
+    &.select_input_inline {
+        display: inline-block;
+
+        .select_label {
+            display: inline-block;
+            vertical-align: middle;
+            height: auto;
+            margin-right: 10px;
+            position: relative;
+            width: 100px;
+            // text-align: right;
+            /*&:after {
+                content: ':';
+                margin-left: 5px;
+            }*/
+        }
+
+        > span:not(.select_label) {
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 0px;
+        }
+        .ant-select-selection {
+            margin-top: 0px;
+        }
+
+        &.select_input_fullwidth {
+            .do_select_comp {
+                width: calc(100% - 110px);
+            }
+        }
+    }
+}

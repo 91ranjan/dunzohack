@@ -9,8 +9,8 @@ import {
 } from 'utils/createActions';
 // import Query from 'graphql-query-builder';
 
-export const entity_name = 'flows';
-export const base_action = 'FLOWS';
+export const entity_name = 'search';
+export const base_action = 'SEARCH';
 
 export const reducerConfig = {
     baseAction: base_action,
@@ -20,35 +20,35 @@ export const reducerConfig = {
 export const entityActions = {
     get: createGetAction(
         payload => {
-            return `/${payload.filters.product}/flows`;
+            return `/search`;
         },
         payload => payload.filters,
         {}
     ),
     getById: createGetAction(
         payload => {
-            return `/${payload.filters.product}/flows/` + payload.filters.id;
+            return `/search/` + payload.filters.id;
         },
         {},
         {}
     ),
     save: createSaveAction(
         payload => {
-            return `/${payload.filters.product}/flows`;
+            return `/search`;
         },
         payload => payload.data,
         {}
     ),
     update: createUpdateAction(
         payload => {
-            return `/${payload.filters.product}/flows`;
+            return `/search`;
         },
         payload => payload.data,
         {}
     ),
     delete: createDeleteAction(
         payload => {
-            return `/${payload.filters.product}/flows/${payload.filters.id}`;
+            return `/search/${payload.filters.id}`;
         },
         payload => payload.data,
         {}

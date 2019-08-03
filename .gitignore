@@ -2,3 +2,4 @@ node_modules/
 build
 test
 gitrun.js
+\.DS_Store/

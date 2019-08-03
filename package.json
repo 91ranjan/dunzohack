@@ -11,6 +11,7 @@
     "exec": "ts-node node_modules/.bin/cucumber-js -r ./src/definitions/stepWrapper.js ./features"
   },
   "dependencies": {
+    "@elastic/elasticsearch": "^7.3.0",
     "activedirectory": "^0.7.2",
     "agenda": "^2.0.2",
     "apollo-server-express": "^2.4.0",
@@ -25,6 +26,7 @@
     "compression": "^1.7.3",
     "cookies": "^0.7.3",
     "cucumber": "^5.0.2",
+    "elasticsearch": "^16.3.0",
     "excel4node": "^1.7.0",
     "express": "^4.16.3",
     "express-graphql": "^0.7.1",
@@ -44,6 +46,7 @@
     "nconf": "^0.10.0",
     "node-run-cmd": "^1.0.1",
     "nodejs-license-file": "^4.0.0",
+    "nodemon": "^1.19.1",
     "puppeteer": "^1.11.0",
     "puppeteer-core": "^1.11.0",
     "randexp": "^0.5.3",

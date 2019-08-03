@@ -12,11 +12,6 @@ export default class PageLayout extends React.PureComponent {
     static contextTypes = {
         history: PropTypes.object,
     };
-    componentWillMount() {
-        if (!localStorage.getItem('user')) {
-            window.location = '/login';
-        }
-    }
 
     render() {
         const classes = cns('page-content', {

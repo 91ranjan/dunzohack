@@ -18,7 +18,7 @@ export default class SearchRoute {
   }
 
   init() {
-    this.router.get("/", this.search);
+    this.router.get("/", this.get);
     this.router.get("/:id", this.getById);
     this.router.post("/", this.create);
     this.router.put("/", this.update);

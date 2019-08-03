@@ -1,4 +1,5 @@
 import * as mongoose from 'mongoose';
+import * as mongoosastic from 'mongoosastic';
 import * as logger from 'tracer';
 const _console = logger.colorConsole;
 import { getListFilters } from '../helpers/pageHelpers';
@@ -25,8 +26,8 @@ class RecieptsModel {
             {
                 id: { type: String, required: true }, // unique for a store
                 mobile: { type: String, required: true },
-                store_name: { type: String, required: false },
-                product_name: { type: String, required: false },
+                store_name: { type: String, required: false, es_indexed: true },
+                product_name: { type: String, required: false, es_indexed: true },
                 address: { type: String, required: false },
                 cgst: { type: String, required: false },
                 sgst: { type: String, required: false },
@@ -41,18 +42,39 @@ class RecieptsModel {
                 toJSON: { virtuals: true },
             }
         );
+        this._schema.plugin(mongoosastic, {
+            hosts: ['localhost:9200']
+        });
     }
 
     _initModel() {
         this._model = mongoose.model('reciepts', this._schema);
+        this._model.createMapping(function (err, mapping) {
+            if (err) {
+                // console.log('error creating mapping (you can safely ignore this)');
+                console.log(err);
+            } else {
+                console.log('mapping created!');
+                console.log(mapping);
+            }
+        });
+        this._model.synchronize();
     }
 
     getAll(filters) {
         var deferred = Q.defer();
         const { searchFilters, pageFilters } = getListFilters(filters, filterOpts);
-
-        this._model
-            .find(searchFilters)
+        console.log(searchFilters.q);
+        this._model.search({ query_string: { query: searchFilters.q } }, { hydrate: true }, function (err, results) {
+            if (err) {
+                console.log('Reciept.getAll : ' + err.message);
+                return deferred.reject(new Error(err));
+            }
+            console.log(results);
+            return deferred.resolve(results.hits.hits || {});
+        })
+        /*this._model
+            .search(searchFilters.q)
             .limit(pageFilters.limit)
             .skip(pageFilters.offset)
             .sort({ createdAt: -1 })
@@ -61,13 +83,13 @@ class RecieptsModel {
             //     model: 'usecases',
             // })
             .populate('release')
-            .exec(function(err, docs) {
+            .exec(function (err, docs) {
                 if (err) {
                     console.log('Reciept.getAll : ' + err.message);
                     return deferred.reject(new Error(err));
                 }
                 return deferred.resolve(docs || {});
-            });
+            });*/
 
         return deferred.promise;
     }
@@ -76,7 +98,7 @@ class RecieptsModel {
         var deferred = Q.defer();
         const { searchFilters } = getListFilters(filters, filterOpts);
 
-        this._model.count(searchFilters).exec(function(err, docs) {
+        this._model.count(searchFilters).exec(function (err, docs) {
             if (err) {
                 console.error(err);
                 return deferred.reject(new Error(err));
@@ -100,7 +122,7 @@ class RecieptsModel {
                 },
             })
             .populate('release')
-            .exec(function(err, docs) {
+            .exec(function (err, docs) {
                 if (err) {
                     console.log('Reciept.getById : ' + err.message);
                     return deferred.reject(new Error(err));
@@ -113,7 +135,7 @@ class RecieptsModel {
 
     create(data) {
         var deferred = Q.defer();
-
+        console.log(data);
         this._model.create(data, (err, doc) => {
             if (err) {
                 return deferred.reject(new Error(err));

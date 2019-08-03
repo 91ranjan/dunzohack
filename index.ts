@@ -11,7 +11,7 @@ export const client = new elasticsearch.Client({
 });
 
 // ping the client to be sure Elasticsearch is up
-client.ping(
+/*client.ping(
   {
     requestTimeout: 30000
   },
@@ -53,7 +53,7 @@ client.ping(
         });
     }
   }
-);
+);*/
 
 // add a data to the index that has already been created
 /*client.index({

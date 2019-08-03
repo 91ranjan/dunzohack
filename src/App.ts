@@ -74,7 +74,7 @@ class App {
 
     async _initDb() {
         (<any>mongoose).Promise = bluebird;
-        (<any>mongoose).connect('mongodb://localhost:27017/testmanager_1');
+        (<any>mongoose).connect('mongodb://localhost:27017/dunzo');
         // (<any>mongoose).connect('mongodb://10.46.34.233:27017/calmmanager');
     }
 

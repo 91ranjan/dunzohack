@@ -1863,6 +1863,15 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
+elasticsearch@16.1.1:
+  version "16.1.1"
+  resolved "https://registry.yarnpkg.com/elasticsearch/-/elasticsearch-16.1.1.tgz#1eb657e4ffe6fa2a4b3107b6f24a4118fc3e8393"
+  integrity sha512-OF2fIjcTPfq/4Tj6k4/SZr2IIlfWlBBQoy/em225mfevYFW1abN3nyXKWldXGV+eWI6LWNqB8lb3hAP4d6Rh/Q==
+  dependencies:
+    agentkeepalive "^3.4.1"
+    chalk "^1.0.0"
+    lodash "^4.17.10"
+
 elasticsearch@^16.3.0:
   version "16.3.0"
   resolved "https://registry.yarnpkg.com/elasticsearch/-/elasticsearch-16.3.0.tgz#d8268e5dcb0d01e76b705bac8f8665cc557d5163"
@@ -3742,6 +3751,11 @@ lodash.assign@^4.0.3, lodash.assign@^4.0.6, lodash.assign@^4.1.0, lodash.assign@
   resolved "https://registry.yarnpkg.com/lodash.assign/-/lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7"
   integrity sha1-DZnzzNem0mHRm9rrkkUAXShYCOc=
 
+lodash.clonedeep@4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
+  integrity sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=
+
 lodash.find@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.find/-/lodash.find-4.6.0.tgz#cb0704d47ab71789ffa0de8b97dd926fb88b13b1"
@@ -4154,6 +4168,14 @@ mongodb@~3.1:
   dependencies:
     mongodb-core "3.1.11"
     safe-buffer "^5.1.2"
+
+mongoosastic@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/mongoosastic/-/mongoosastic-4.5.0.tgz#e06a856a3c94aa23e0103ef0bcaf3377012f17d6"
+  integrity sha512-ArOOaggF/AqODHINJtynOX2CoaoLIb3OPNhGSkCiG6/PozOv0mqcP5/F3iXd/baNFjhjhZDYmhHVxkI14MfBJA==
+  dependencies:
+    elasticsearch "16.1.1"
+    lodash.clonedeep "4.5.0"
 
 mongoose-legacy-pluralize@1.0.2:
   version "1.0.2"

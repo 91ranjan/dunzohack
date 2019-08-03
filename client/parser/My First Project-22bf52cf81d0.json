@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "plated-magpie-248707",
+  "private_key_id": "22bf52cf81d0345cde17b681171805b209c50fc7",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCMPVwn8MEeEy6E\nJk5njokN5b2EDPnu0cyl89YN1Ee13Mj095eypeQVNQocJUOkBx5t/bebFSso8P++\nbXs/1G6reln/i+TrdhTx0kw6CFAqIRGQeMBPTdeNhSh6/v6JSn0xgE26AY7RfIyb\nvGs24a9jpZ7S/i1HBB5yMVfxaldS7bKDvZJDc0+2XWPcnO+O8hRlHAdllETbnS95\nrduStpS/E2/UrHst037g9DbxGa1hw0o2TlBBmXMvDZypf0NWmzEmZT/hhXBztnBT\n3X2zFU6V+or8cdmO+pZ5KPhvEKcL55FXtQNg7nAUJdqVTPBYGEoYofKP8kFuFRRV\nXi/01cWrAgMBAAECggEAN+PKYvaNmFVPsAXuMFI7Z8j8DvD2+IkvVKIJWGiWDbII\neqxkDiQT8qm5Nj9ZpjjaFT7M2icFFON7IOLUADvCwV9ZF8GigX6FWVyU2XnvrOKR\n8/BTwCdHNRTw7ZfLTF7d5wj5sRwm1XEcPoLIfc5SzlU2p2L6G3fWRG9K26EkXR1c\nAcvbCkOsw3nriVuoR3lZBPVIsRIJnWXN/SvuAWLq65NTG/f13uBYOy5xhcf9i2xY\nAdQdY4xnfVyOKbFq/JCebZg7e8fAqbIydQ1fnxBoMGQLGKQ5aFY7vMMGU5F9GeZw\n8QcCzVAxr5bPp2p+4Ppp9OOa+dCVmfONmBdGs/MgUQKBgQDADftjyn5h6N3kbeKx\ncxIVzTi/j5tQrqfUnO5NYSsA7dRVMT20fb6MiYOBcHBftZCjXjP0SjxeKey5Zubt\najvYXDMEqFdDMf+0H3TJFzqa+SGsH6IwkvjtnM4KOHBnqGtUMrlQlrl48SF7vK13\ngCMNV3KxcQta3DZNon3Ry7qnuwKBgQC67t3yIiXXysG4q6MNC9kq923/3/F388hC\naaj52tUPnrUpPV/FiamtnQJs9alYJXkB6HSec/jMQZGhCLOqUbQ7jgh8brf584sg\nezJsVpPASHgEcIp2DihOXl6JXrN9vKdkNCRDdOFQjEt5E98V7qP/leQNyAViU+7i\na7qPhMQi0QKBgCawKl4V4pOyp1Bm2m3IsnH132KneTAtnt1zp4Wq91C+mDF5M+by\nFbqV0Qn4Lor5NmPSjEC/251UcL2AfzCAYAHbwONFTh7ZKZuNYqdHqKSjXycfUDrc\nwIyNM+xXJj2bbdOOTEpxsncsjAQzI/aYt3bukMox7YmmJsJI43OpyLYVAoGAfRYF\n8lajWAjXJInFq584DKZRNx1VaVz5rmchqT+jvrYGp7fn9DkwD3q2+s5QKSm6FWrF\nTppv684cctNt1hSiNA/Q4eL8vQcZG/0UOqaca9iSZvYf0OucUQSY4fc6yHKK2GSD\nt5fohYu7nSOM7hIoL4jPd+FWqPtdKKnJxuuii2ECgYA5YnJbYObumkxeo1YcQEsp\nvsuAWUsZ3kCiVp44kUGMZqs0oJKUcMm3bV+bkMavxYpQoTz2XxFeFD9j9+v+yM3k\nkvGBahrNzq4rtNN5IhzhYjTOyBBesZ8GoUa1j/UqMCqA18VYh1F0VQBPVK0c+2jA\n0VTepZboDT0hK6QnC55Wxg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "personal@plated-magpie-248707.iam.gserviceaccount.com",
+  "client_id": "113031204150173451781",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/personal%40plated-magpie-248707.iam.gserviceaccount.com"
+}

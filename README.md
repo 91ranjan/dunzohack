@@ -11,17 +11,32 @@ Test Manager requires
   - [MongoDb](https://medium.com/@himeshvats19/up-running-with-mongodb-in-7-simple-steps-using-brew-on-macos-sierra-785730a7e6b0)
   - [Redis Server](https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298 )
 
-Steps :-
+Steps :- Backend
 ```
 $ git clone https://gitlab.com/91ranjan/test-manager-backend.git
 $ cd test-manager-backend
 $ npm install | yarn install
 ```
+Steps :- Frontend
+```
+$ git clone https://gitlab.com/91ranjan/test-manager-backend.git
+$ cd client/web
+$ npm install | yarn install
+```
+
 
 ### Run server
 On one tab:-
 ```
 $ redis-server
+```
+On one tab:-
+```
+$ mongod
+```
+On one tab:-
+```
+$ elasticsearch
 ```
 
 On the other one

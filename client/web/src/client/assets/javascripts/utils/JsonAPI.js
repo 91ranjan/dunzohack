@@ -39,19 +39,14 @@ export function post(url, data, opts) {
 
 export function upload(url, formData, opts) {
     const urlString = getUrl(url, opts);
+    console.log(urlString);
     const token = localStorage.getItem('token') || defaultToken;
 
-    return (
-        request
-            .post(urlString)
-            .send(formData)
-            .set('x-files-upload', true)
-            .set('x-access-token', token)
-            // .set('Content-Type', 'multipart/form-data')
-            //.set('Content-Type', 'multipart/form-data')
-            .set('Accept', 'application/json')
-            .set('Authorization', localStorage.getItem('token'))
-    );
+    return request
+        .post(urlString)
+        .send(formData)
+        // .set('Content-Type', 'multipart/form-data')
+        .set('Accept', 'application/json');
 }
 
 export function put(url, data, opts) {

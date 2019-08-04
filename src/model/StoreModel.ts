@@ -10,7 +10,7 @@ const filterOpts = {
     like: ['name'],
 };
 
-class RecieptsModel {
+class StoreModel {
     _schema;
     _model;
     constructor() {
@@ -24,17 +24,18 @@ class RecieptsModel {
     _defineSchema() {
         this._schema = new mongoose.Schema(
             {
-                id: { type: String, required: true }, // unique for a store
-                mobile: { type: String, required: true },
+                // id: { type: String, required: true }, // unique for a store
+                mobile: { type: String, required: true, unique: true },
                 store_name: { type: String, required: false, es_indexed: true },
-                product_name: { type: String, required: false, es_indexed: true },
                 address: { type: String, required: false },
                 cgst: { type: String, required: false },
                 sgst: { type: String, required: false },
                 gstin: { type: String, required: false },
-                variant: { type: String, required: false },
-                price: { type: String, required: false },
                 packaging: { type: String, required: false },
+                categories: [{ type: String, required: false }]
+                /*product_name: { type: String, required: false, es_indexed: true },
+                variant: { type: String, required: false },
+                price: { type: String, required: false },*/
             },
             {
                 timestamps: true,
@@ -48,7 +49,7 @@ class RecieptsModel {
     }
 
     _initModel() {
-        this._model = mongoose.model('reciepts', this._schema);
+        this._model = mongoose.model('stores', this._schema);
         this._model.createMapping(function (err, mapping) {
             if (err) {
                 // console.log('error creating mapping (you can safely ignore this)');
@@ -136,12 +137,13 @@ class RecieptsModel {
     create(data) {
         var deferred = Q.defer();
         console.log(data);
-        this._model.create(data, (err, doc) => {
-            if (err) {
-                return deferred.reject(new Error(err));
-            }
-            deferred.resolve(doc);
-        });
+        this._model.findOneAndUpdate({ mobile: data.mobile }, data, { upsert: true, new: true })
+            .exec((err, doc) => {
+                if (err) {
+                    return deferred.reject(new Error(err));
+                }
+                deferred.resolve(doc);
+            })
 
         return deferred.promise;
     }
@@ -174,4 +176,4 @@ class RecieptsModel {
     }
 }
 
-export default new RecieptsModel();
+export default new StoreModel();

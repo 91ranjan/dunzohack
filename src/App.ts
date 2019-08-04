@@ -1,34 +1,25 @@
 import * as express from 'express';
-import * as Cucumber from 'cucumber';
 import * as mongoose from 'mongoose';
 import * as nconf from 'nconf';
 import * as bluebird from 'bluebird';
 import * as activedirectory from 'activedirectory';
-import Puppet from './utils/puppeteer';
 import * as morgan from 'morgan';
 import * as compression from 'compression';
 import * as bodyParser from 'body-parser';
 import * as logger from 'tracer';
 // import { Basics } from './definitions/blueprint';
 
-import LicenseManager from "./utils/LicenseManager";
 import config from '../config';
-import GlobalVars from './utils/GlobalVars';
-import Cache from './utils/Cache';
 
 // Routes
 import SearchRoute from './routes/search';
+import RecieptRoute from './routes/reciepts';
+import ProductRoute from './routes/product';
 
 nconf
     .argv()
     .env()
 const _console = logger.colorConsole();
-
-// Loading nconf for the application
-Object.keys(config).forEach(key => {
-    GlobalVars.set(key, config[key]);
-})
-
 
 class App {
     express;
@@ -41,8 +32,7 @@ class App {
         this.express = express();
         this._initExpress();
         await this._initDb();
-        Cache.init();
-        this._puppet = new Puppet();
+        // Cache.init();
         this._routes = [];
         this.mountRoutes();
         this._server = this.express;
@@ -80,8 +70,12 @@ class App {
 
     mountRoutes(): void {
         const searchApis = new SearchRoute(this._jira, this._puppet).router;
+        const recieptApis = new RecieptRoute(this._jira, this._puppet).router;
+        const productApis = new ProductRoute(this._jira, this._puppet).router;
 
         this.express.use('/search', searchApis);
+        this.express.use('/reciept', recieptApis);
+        this.express.use('/product', productApis);
     }
 }
 
@@ -89,7 +83,7 @@ function exitHandler(option) {
     _console.error('Exiting App.');
     if (option.exit) {
         _console.log('Dumping ACP cache.');
-        Cache.dump();
+        // Cache.dump();
     }
     process.exit();
 }

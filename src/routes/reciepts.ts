@@ -1,13 +1,14 @@
 import * as express from "express";
+import * as multer from 'multer';
 import { parallel } from "async";
 
-import { client } from "../../index";
-import SearchController from "../controllers/SearchCtrl";
-const SearchCtrl = new SearchController();
+var upload = multer({ dest: 'uploads/', fieldname: 'file' })
+import RecieptController from "../controllers/RecieptCtrl";
+const RecieptCtrl = new RecieptController();
 
 import { main } from '../../client/jsparser/textparser'
 
-export default class SearchRoute {
+export default class RecieptsRoute {
     router: express.Router;
     _express;
     _jira;
@@ -20,17 +21,19 @@ export default class SearchRoute {
     }
 
     init() {
+
         this.router.get("/", this.get);
+        this.router.get("/compute", this.compute);
         this.router.get("/:id", this.getById);
-        this.router.post("/", this.create);
+        this.router.post("/", upload.single('file'), this.computeImage);
         this.router.put("/", this.update);
         this.router.delete("/:id", this.delete);
     }
 
     get(req, res) {
         const promises = [
-            SearchCtrl.getAll(req.query),
-            SearchCtrl.getCount(req.query)
+            RecieptCtrl.getAll(req.query),
+            RecieptCtrl.getCount(req.query)
         ];
         parallel(
             promises.map(query => {
@@ -53,7 +56,7 @@ export default class SearchRoute {
     }
 
     getById(req, res) {
-        SearchCtrl.getById(req.params.id)
+        RecieptCtrl.getById(req.params.id)
             .then(data => {
                 res
                     .status(200)
@@ -64,8 +67,14 @@ export default class SearchRoute {
             });
     }
 
-    create(req, res) {
-        SearchCtrl.create(req.body)
+    async compute(req, res) {
+        const resp = await RecieptCtrl.analyze()
+        res.json({ data: resp });
+    }
+
+    computeImage(req, res) {
+        // console.log(req.body);
+        RecieptCtrl.create(req.body)
             .then(data => {
                 res.status(200).send({ message: "success", data });
             })
@@ -75,7 +84,7 @@ export default class SearchRoute {
     }
 
     update(req, res) {
-        SearchCtrl.update(req.body)
+        RecieptCtrl.update(req.body)
             .then(data => {
                 res.status(200).send({ message: "success", data });
             })
@@ -85,7 +94,7 @@ export default class SearchRoute {
     }
 
     delete(req, res) {
-        SearchCtrl.delete(req.params.id)
+        RecieptCtrl.delete(req.params.id)
             .then(data => {
                 res.status(200).send({ message: "success", data });
             })

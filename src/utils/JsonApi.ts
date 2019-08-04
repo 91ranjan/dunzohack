@@ -6,7 +6,7 @@ export default class JsonApi {
     get(url, data, opts) {
         return superagent
             .get(url)
-            .send(data)
+            .query(data)
             .set('Authorization', 'Basic ' + btoa('ritesh.ranjan1:91@Sonus'))
             .set('Accept', 'application/json');
     }

@@ -5,19 +5,27 @@ import { Input, Select, Button } from 'antd';
 const { Option } = Select;
 
 export default class SearchBar extends React.PureComponent {
-    selectBefore = (
-        <Select defaultValue="product_name" style={{ width: 90 }}>
-            <Option value="product_name">Product</Option>
-            <Option value="store_name">Store</Option>
-        </Select>
-    );
+    selectBefore = () => {
+        const { type } = this.props;
+        return (
+            <Select
+                defaultValue="product_name"
+                value={type || 'product_name'}
+                style={{ width: 90 }}
+                onChange={this.props.onChangeType}
+            >
+                <Option value="product_name">Product</Option>
+                <Option value="store_name">Store</Option>
+            </Select>
+        );
+    };
     render() {
         return (
             <div>
                 <div style={{ marginBottom: 16 }}>
                     <Input
                         value={this.props.value}
-                        addonBefore="Product"
+                        addonBefore={this.selectBefore()}
                         onChange={this.props.onChange}
                         className={styles.Search}
                     />

@@ -1,44 +1,38 @@
 import React from 'react';
 import { Table } from 'antd';
-const columns = [
+const StoreColumns = [
     {
-        title: 'Name',
-        dataIndex: 'name',
-        render: text => <a href="javascript:;">{text}</a>,
+        title: 'Id',
+        dataIndex: '_id',
+        render: id => <a href={`/store/${id}`}>{id}</a>,
     },
     {
-        title: 'Age',
-        dataIndex: 'age',
+        title: 'Store',
+        dataIndex: 'store_name',
     },
     {
         title: 'Address',
         dataIndex: 'address',
     },
+    {
+        title: 'Categories',
+        dataIndex: 'categories',
+        render: cats => cats.join(', '),
+    },
 ];
-const data = [
+const ProductColumns = [
     {
-        key: '1',
-        name: 'John Brown',
-        age: 32,
-        address: 'New York No. 1 Lake Park',
+        title: 'Product',
+        dataIndex: 'product_name',
+        render: text => <a href="javascript:;">{text}</a>,
     },
     {
-        key: '2',
-        name: 'Jim Green',
-        age: 42,
-        address: 'London No. 1 Lake Park',
+        title: 'Price',
+        dataIndex: 'price',
     },
     {
-        key: '3',
-        name: 'Joe Black',
-        age: 32,
-        address: 'Sidney No. 1 Lake Park',
-    },
-    {
-        key: '4',
-        name: 'Disabled User',
-        age: 99,
-        address: 'Sidney No. 1 Lake Park',
+        title: 'Store',
+        dataIndex: 'store',
     },
 ];
 
@@ -54,7 +48,14 @@ const rowSelection = {
 
 export default class SearchResults extends React.PureComponent {
     render() {
-        return <Table rowSelection={rowSelection} columns={columns} dataSource={data} />;
+        const { value, type } = this.props;
+        return value ? (
+            <Table
+                rowSelection={rowSelection}
+                columns={type === 'store_name' ? StoreColumns : ProductColumns}
+                dataSource={value.toJS()}
+            />
+        ) : null;
         /*return (
             <table>
                 <thead>

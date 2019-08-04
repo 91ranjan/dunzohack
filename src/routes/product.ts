@@ -1,13 +1,10 @@
 import * as express from "express";
 import { parallel } from "async";
 
-import { client } from "../../index";
-import SearchController from "../controllers/SearchCtrl";
-const SearchCtrl = new SearchController();
+import ProductController from "../controllers/ProductCtrl";
+const ProductCtrl = new ProductController();
 
-import { main } from '../../client/jsparser/textparser'
-
-export default class SearchRoute {
+export default class ProductRoute {
     router: express.Router;
     _express;
     _jira;
@@ -29,8 +26,8 @@ export default class SearchRoute {
 
     get(req, res) {
         const promises = [
-            SearchCtrl.getAll(req.query),
-            SearchCtrl.getCount(req.query)
+            ProductCtrl.getAll(req.query),
+            ProductCtrl.getCount(req.query)
         ];
         parallel(
             promises.map(query => {
@@ -46,6 +43,7 @@ export default class SearchRoute {
                         message: err
                     });
                 } else {
+                    console.log(results);
                     res.json({ data: results[0], total: results[1] });
                 }
             }
@@ -53,7 +51,7 @@ export default class SearchRoute {
     }
 
     getById(req, res) {
-        SearchCtrl.getById(req.params.id)
+        ProductCtrl.getById(req.params.id)
             .then(data => {
                 res
                     .status(200)
@@ -65,7 +63,7 @@ export default class SearchRoute {
     }
 
     create(req, res) {
-        SearchCtrl.create(req.body)
+        ProductCtrl.create(req.body)
             .then(data => {
                 res.status(200).send({ message: "success", data });
             })
@@ -75,7 +73,7 @@ export default class SearchRoute {
     }
 
     update(req, res) {
-        SearchCtrl.update(req.body)
+        ProductCtrl.update(req.body)
             .then(data => {
                 res.status(200).send({ message: "success", data });
             })
@@ -85,7 +83,7 @@ export default class SearchRoute {
     }
 
     delete(req, res) {
-        SearchCtrl.delete(req.params.id)
+        ProductCtrl.delete(req.params.id)
             .then(data => {
                 res.status(200).send({ message: "success", data });
             })

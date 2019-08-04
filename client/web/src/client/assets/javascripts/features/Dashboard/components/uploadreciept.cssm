@@ -1,0 +1,6 @@
+.modal {
+    :global(div.ant-modal-body) {
+        padding: 50px;
+    }
+
+}

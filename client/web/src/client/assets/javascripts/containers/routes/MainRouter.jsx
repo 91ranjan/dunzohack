@@ -33,6 +33,7 @@ const loadComp = path =>
 
 // import Login from 'containers/routes/Login';
 import Dashboard from 'containers/routes/Dashboard';
+import Store from 'containers/routes/Store';
 // import NoMatch from 'containers/routes/NoMatch';
 // import Steps from 'containers/routes/Steps';
 // import Flows from 'containers/routes/Flows';
@@ -56,6 +57,7 @@ export default class MainRouter extends React.PureComponent {
         return (
             <Fragment>
                 <Route path="/" exact={true} component={Dashboard} />
+                <Route path="/store/:store_id" exact={true} component={Store} />
             </Fragment>
         );
     }

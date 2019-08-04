@@ -134,7 +134,7 @@ def home():
     return '''<h1>API</h1>
 <p>Get the image API</p>'''
 
-@app.route('/type', methods=['POST'])
+@app.route('/analyze', methods=['POST'])
 def api_id():
     file=request.files['file']
     filename = file.filename
@@ -142,7 +142,7 @@ def api_id():
     file.save(file_directory)
     results = getData(file_directory)
     return jsonify(results)
-@app.route('/type1', methods=['GET'])
+@app.route('/compute', methods=['GET'])
 def api_id1():
 	results=[]
 	directory = os.fsencode('all_images')

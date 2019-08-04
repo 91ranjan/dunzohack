@@ -42,21 +42,7 @@ class ProductModel {
 
     _initModel() {
         this._model = mongoose.model('products', this._schema);
-        this._model.createMapping({
-            "mappings": {
-                "stores": {
-                    "_all": {
-                        "analyzer": "nGram_analyzer",
-                        "search_analyzer": "whitespace_analyzer"
-                    },
-                    "properties": {
-                        "product_name": {
-                            "type": "string",
-                        },
-                    }
-                }
-            }
-        },function (err, mapping) {
+        this._model.createMapping(function (err, mapping) {
             if (err) {
                 // console.log('error creating mapping (you can safely ignore this)');
                 console.log(err);

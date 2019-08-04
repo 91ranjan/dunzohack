@@ -50,7 +50,21 @@ class StoreModel {
 
     _initModel() {
         this._model = mongoose.model('stores', this._schema);
-        this._model.createMapping(function (err, mapping) {
+        this._model.createMapping({
+            "mappings": {
+                "stores": {
+                    "_all": {
+                        "analyzer": "nGram_analyzer",
+                        "search_analyzer": "whitespace_analyzer"
+                    },
+                    "properties": {
+                        "store_name": {
+                            "type": "string",
+                        },
+                    }
+                }
+            }
+        }, function (err, mapping) {
             if (err) {
                 // console.log('error creating mapping (you can safely ignore this)');
                 console.log(err);

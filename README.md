@@ -14,14 +14,14 @@ Test Manager requires
 
 Steps :- Backend
 ```
-$ git clone https://gitlab.com/91ranjan/test-manager-backend.git
-$ cd test-manager-backend
+$ git clone https://github.com/91ranjan/dunzohack.git
+$ cd dunzohack
 $ npm install | yarn install
 ```
 Steps :- Frontend
 ```
-$ git clone https://gitlab.com/91ranjan/test-manager-backend.git
-$ cd client/web
+$ git clone https://github.com/91ranjan/dunzohack.git
+$ cd dunzohack/client/web
 $ npm install | yarn install
 ```
 

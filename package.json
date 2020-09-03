@@ -54,7 +54,7 @@
     "node-run-cmd": "^1.0.1",
     "nodejs-license-file": "^4.0.0",
     "nodemon": "^1.19.1",
-    "puppeteer": "^1.11.0",
+    "puppeteer": "^1.13.0",
     "puppeteer-core": "^1.11.0",
     "randexp": "^0.5.3",
     "redis": "^2.8.0",

@@ -17,7 +17,7 @@
     "activedirectory": "^0.7.2",
     "agenda": "^2.0.2",
     "apollo-server-express": "^2.4.0",
-    "async": "^2.6.1",
+    "async": "^3.2.2",
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.18.3",
     "btoa": "^1.2.1",
